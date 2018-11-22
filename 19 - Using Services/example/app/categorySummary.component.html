@@ -1,0 +1,16 @@
+
+<table class="table  table-striped">	
+	<strong><caption *ngIf="caption" style="line-height: 15px;">{{ caption }}</caption></strong>
+    <tr style="vertical-align:middle; line-height: 5px;">
+		<th>Total</th> <th>Count</th> <th>Average</th>
+    </tr>
+    <tr style="line-height: 5px;" *paFor="let item of getCategorySummary(); let i = index; 
+            let odd = odd; let even = even" [class.bg-info]="odd" 
+            [class.bg-success]="even">
+
+        <td style="vertical-align:middle">{{item.totalSum | currency:"USD":true}} </td>
+		<td style="vertical-align:middle">{{item.count }} </td>
+		<td style="vertical-align:middle">{{item.average  | currency:"USD":true}} </td>
+    </tr>
+</table>
+

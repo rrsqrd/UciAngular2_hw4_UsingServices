@@ -1,0 +1,26 @@
+﻿<!-- template.html -->
+<!-- <div> <h4> Chapter 19: Using Services</h4></div> -->
+
+<!-- With services/DI throughout the application,
+     no need for event binding on new product event or model.
+		< paProductForm (paNewProduct)="addProduct($event)"></ paProductForm > 
+		< paProductTable [model]="model ">< / paProductTable >
+-->	 
+
+<div class="col-xs-3 p-a-1">  	
+	<paCategorySummary [caption]="'All Category Names'"></paCategorySummary>	
+    <paProductForm></paProductForm>
+	<br>
+	<paCategorySummary [caption]="'Short Category Names'"></paCategorySummary>
+	<br>
+</div>
+
+
+<div class="col-xs-8 p-a-1">
+    <paProductTable></paProductTable>	
+	<br>
+</div>
+
+<div class="col-xs-3 p-a-1">
+	<paCategorySummary [caption]="'Long Category Names'"></paCategorySummary>
+</div>
